@@ -1,7 +1,10 @@
-import { StrictMode } from 'react';
+import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { InstagromApp } from './07/useOptimistic/InstagromApp';
+// import { InstagromApp } from './07/useOptimistic/InstagromApp';
+// import { ClientInformation } from './08-use-suspense/ClientInformation';
+// import { getUser } from './08-use-suspense/api/get-user-action';
+import { ProfessionalApp } from './09-useContext/ProfessionalApp';
 /* import { TrafficLight } from './01-useState/TrefficLight'
 import { TrafficLightWithEffect } from './02-useEffect/TrefficLightWithEffect' */
 /* import { TrafficLightWithHook } from './02-useEffect/TrefficLightWithHook' */
@@ -21,6 +24,14 @@ createRoot(document.getElementById('root')!).render(
     {/* <ScrambleWords /> */}
     {/* <MemoHook /> */}
     {/* <MemoCounter /> */}
-    <InstagromApp />
+    {/* <InstagromApp /> */}
+    {/* <Suspense fallback={
+      <div className='bg-gradient'>
+        <h1 className='text-2xl'>Cargando...</h1>
+      </div>
+    }>
+        <ClientInformation getUser={getUser(1001)}/>
+    </Suspense> */}
+    <ProfessionalApp />
   </StrictMode>,
 )
